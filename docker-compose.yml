@@ -1,22 +1,8 @@
 version: "3"
 services:
     xmebank:
-        image: jakesoft/xmebank:v2.4
+        image: jakesoft/xmebank
         ports:
-            - "3922:22"
-            - "3980:80"
+            - "80:80"
         volumes:
             - /home/Jake/Code/xmebank-v2:/usr/share/nginx/xm # 第一个目录是你本地代码目录，可以使用相对路径
-        depends_on:
-            - database
-        links:
-            - database
-    database:
-        image: mysql
-        restart: always
-        environment:
-            - MYSQL_ROOT_PASSWORD=123456
-    redis:
-        image: redis
-        restart: always
-

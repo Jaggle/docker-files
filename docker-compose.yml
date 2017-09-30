@@ -1,7 +1,7 @@
 version: "3"
 services:
     xmebank:
-        image: centos_1
+        image: jakesoft/xmebank:v2.4
         ports:
             - "3922:22"
             - "3980:80"

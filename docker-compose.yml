@@ -1,0 +1,9 @@
+version: "3"
+services:
+    xmebank:
+        image: centos_1
+        ports:
+            - "3922:22"
+            - "3980:80"
+        volumes:
+            - /home/Jake/Code/xmebank-v2:/usr/share/nginx/xm # 第一个目录是你本地代码目录，可以使用相对路径
